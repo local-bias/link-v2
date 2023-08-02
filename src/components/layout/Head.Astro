@@ -1,0 +1,12 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import 'src/styles/global.css';
+
+type Props = HTMLAttributes<'head'>;
+
+const props = Astro.props;
+---
+
+<head {...props}>
+  <slot />
+</head>
