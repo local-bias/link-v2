@@ -1,7 +1,47 @@
 ---
+import { LINKS } from 'src/consts';
 import Layout from '../layouts/Layout.astro';
+import SVGGradient from 'src/components/SVGGradient.astro';
+import Me from 'src/components/Me.astro';
+import Social from 'src/components/Social.astro';
+import Grid from 'src/components/Grid.astro';
+import Card from 'src/components/Card.astro';
+import User from 'src/components/icon/User.astro';
+import Star from 'src/components/icon/Star.astro';
+import Edit3 from 'src/components/icon/Edit.astro';
+import HelpCircle from 'src/components/icon/Help.astro';
+import Zap from 'src/components/icon/Zap.astro';
+import FileText from 'src/components/icon/FileText.astro';
 ---
 
 <Layout title="関連リンク">
-  <main></main>
+  <SVGGradient />
+  <Me />
+  <Grid>
+    {
+      LINKS.map((link) => (
+        <Card thin href={link.url} title={link.label} description={link.labelEn}>
+          {link.icon === 'person' && (
+            <User width={36} height={36} stroke-width={1} stroke="url(#gradient-main)" />
+          )}
+          {link.icon === 'star' && (
+            <Star width={36} height={36} stroke-width={1} stroke="url(#gradient-main)" />
+          )}
+          {link.icon === 'edit' && (
+            <Edit3 width={36} height={36} stroke-width={1} stroke="url(#gradient-main)" />
+          )}
+          {link.icon === 'help' && (
+            <HelpCircle width={36} height={36} stroke-width={1} stroke="url(#gradient-main)" />
+          )}
+          {link.icon === 'zap' && (
+            <Zap width={36} height={36} stroke-width={1} stroke="url(#gradient-main)" />
+          )}
+          {link.icon === 'memo' && (
+            <FileText width={36} height={36} stroke-width={1} stroke="url(#gradient-main)" />
+          )}
+        </Card>
+      ))
+    }
+  </Grid>
+  <Social />
 </Layout>

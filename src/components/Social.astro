@@ -1,0 +1,25 @@
+---
+import { TWITTER_NAME, GITHUB_NAME, ZENN_NAME } from 'src/consts';
+import GitHubIcon from 'src/components/icon/GitHub.astro';
+import TwitterIcon from 'src/components/icon/Twitter.astro';
+import ZennIcon from 'src/components/icon/Zenn.astro';
+import SocialLink from './SocialLink.astro';
+---
+
+<div class="mt-8 flex gap-4 justify-center text-cyan-700">
+  <SocialLink href={`https://github.com/${GITHUB_NAME}`}>
+    <GitHubIcon stroke="url(#gradient-main)" />
+  </SocialLink>
+  <SocialLink href={`https://twitter.com/@${TWITTER_NAME}`}>
+    <TwitterIcon stroke="url(#gradient-main)" />
+  </SocialLink>
+  <SocialLink href={`https://zenn.dev/${ZENN_NAME}`}>
+    <ZennIcon stroke="url(#gradient-main)" />
+  </SocialLink>
+</div>
+<style>
+  svg {
+    width: 1.5rem;
+    color: var(--color-primary);
+  }
+</style>

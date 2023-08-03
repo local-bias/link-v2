@@ -4,16 +4,10 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-html,
-body {
-  @apply text-slate-600 antialiased;
-  font-family: 'Yu Gothic Medium', 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN',
-    'Hiragino Sans', Meiryo, sans-serif;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  @apply bg-white;
+:root {
+  --color-primary: #1eae98;
+  --color-secondary: #d8b5ff;
+  --gradient-main: var(--color-secondary), var(--color-primary);
 }
 
 ::selection {
