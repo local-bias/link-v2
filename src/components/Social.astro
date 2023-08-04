@@ -6,7 +6,7 @@ import ZennIcon from 'src/components/icon/Zenn.astro';
 import SocialLink from './SocialLink.astro';
 ---
 
-<div class="mt-8 flex gap-4 justify-center text-cyan-700">
+<div>
   <SocialLink href={`https://github.com/${GITHUB_NAME}`} aria-label="Githubへのリンク">
     <GitHubIcon stroke="url(#gradient-main)" />
   </SocialLink>
@@ -18,8 +18,15 @@ import SocialLink from './SocialLink.astro';
   </SocialLink>
 </div>
 <style>
+  div {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    color: rgb(14 116 144);
+  }
   svg {
-    width: 1.5rem;
+    width: 24px;
     color: var(--color-primary);
   }
 </style>

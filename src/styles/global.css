@@ -10,17 +10,36 @@
   --gradient-main: var(--color-secondary), var(--color-primary);
 }
 
+body {
+  font-family: 'Yu Gothic Medium', 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: rgb(14 116 144);
+  font-weight: 400;
+}
+
 ::selection {
   background: #1e8cbe77;
   color: #fff;
 }
 
 ::-webkit-scrollbar {
-  @apply w-1 h-1 md:w-2 md:h-2;
+  width: 4px;
+  height: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-400 rounded-full;
+  background-color: rgb(148 163 184);
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
 }

@@ -3,11 +3,7 @@ import { SITE_NAME } from 'src/consts';
 ---
 
 <div>
-  <img
-    class="w-36 h-36 rounded-full"
-    src="https://assets.konomi.app/img/avatar.webp"
-    alt={`${SITE_NAME}のアイコン`}
-  />
+  <img src="https://assets.konomi.app/img/avatar.webp" alt={`${SITE_NAME}のアイコン`} />
   {SITE_NAME}
 </div>
 <style>
@@ -21,5 +17,10 @@ import { SITE_NAME } from 'src/consts';
   }
   div:before {
     position: absolute;
+  }
+  img {
+    width: 144px;
+    height: 144px;
+    border-radius: 9999px;
   }
 </style>
