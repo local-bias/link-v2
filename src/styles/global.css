@@ -13,7 +13,6 @@
 body {
   font-family: 'Yu Gothic Medium', 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN',
     'Hiragino Sans', Meiryo, sans-serif;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
