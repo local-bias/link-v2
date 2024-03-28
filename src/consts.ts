@@ -22,7 +22,7 @@ export const LINKS: Link[] = [
     icon: 'edit',
   },
   {
-    url: 'https://products.konomi.app',
+    url: 'https://kintone-plugin.konomi.app',
     label: '製品',
     labelEn: 'Products',
     memo: 'powered by Next.js',
